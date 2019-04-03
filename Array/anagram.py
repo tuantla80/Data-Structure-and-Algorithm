@@ -15,7 +15,7 @@ Example 2:
 def anagram_simple_solution(s1, s2):
     """
     Method 1:
-    It is a simple code but about O(n*log(n))
+    It is a simple code but between O(n*log(n)) and O(n^2)
     """
     s1 = s1.replace(' ', '').lower()
     s2 = s2.replace(' ', '').lower()
@@ -31,9 +31,22 @@ def anagram_simple_solution(s1, s2):
     return True
 
 
-def anagram(s1, s2):
+def anagram_solved_by_sorted(s1, s2):
     """
     Method 2:
+    Using sorted method hence with O(n*log(n))
+    (More info.: sorted with O(n*log(n)) and compared two string with O(n))
+    """
+
+    s1 = s1.replace(' ', '').lower()
+    s2 = s2.replace(' ', '').lower()
+
+    return sorted(s1) == sorted(s2)
+
+
+def anagram(s1, s2):
+    """
+    Method 3:
     It is an efficient code with O(n)
     """
     s1 = s1.replace(' ', '').lower()
@@ -46,16 +59,14 @@ def anagram(s1, s2):
 
     # Count number of each letter in s1
     for letter in s1:
-        if letter in counter:
+        if letter in counter.keys():
             counter[letter] += 1
         else:
             counter[letter] = 1
 
-    print(counter)
-
     # Check each letter in s2 and reduce the counter to compare with s1
     for letter in s2:
-        if letter in counter:
+        if letter in counter.keys():
             counter[letter] -= 1
         else:
             return False
@@ -75,6 +86,9 @@ def test(s1, s2, sol):
 if __name__ == "__main__":
     test(s1="Anagram", s2="na  ga  ram", sol=anagram_simple_solution)
     test(s1="rat", s2="car", sol=anagram_simple_solution)
+
+    test(s1="Anagram", s2="na  ga  ram", sol=anagram_solved_by_sorted)
+    test(s1="rat", s2="car", sol=anagram_solved_by_sorted)
 
     test(s1="Anagram", s2="na  ga  ram", sol=anagram)
     test(s1="rat", s2="car", sol=anagram)
