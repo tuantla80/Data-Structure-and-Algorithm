@@ -5,6 +5,8 @@ Note: class in Python: public vs private methods.
 Ref: https://docs.python.org/3/library/ctypes.html
 """
 import ctypes
+import sys
+
 
 class DynamicArray(object):
 
@@ -58,12 +60,13 @@ class DynamicArray(object):
         """
         return (new_capacity * ctypes.py_object)()
 
-def test_DynamicArray():
 
+def test_DynamicArray():
     _array = DynamicArray()
     _array.append("test1")
     _array.append("test2")
     print("len = {}, _array[0]={}, _array[1]={}".format(len(_array), _array[0], _array[1]))
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     test_DynamicArray()
