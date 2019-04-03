@@ -62,6 +62,7 @@ class DynamicArray(object):
 
 
 def test_DynamicArray():
+    
     _array = DynamicArray()
     _array.append("test1")
     _array.append("test2")
