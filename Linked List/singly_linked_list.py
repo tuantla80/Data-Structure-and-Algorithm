@@ -12,6 +12,7 @@ if __name__ == "__main__":
     a.nextnode = b  # make a linked list
     b.nextnode = c  # make a linked list
 
+    # Only can access forwards
     print("Access to value of a node: ", a.value)
     print('Access to b node: ', a.nextnode)
     print("Access to value of b node: ", a.nextnode.value)
