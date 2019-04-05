@@ -8,10 +8,10 @@ class SinglyLinkedList(object):
         self.nextnode = None
 
 
-def reversal(node):
+def reversal(head):
 
     prevNode = None
-    currentNode = node
+    currentNode = head  # head of the linked list
     # nextNode = None
 
     while currentNode:
