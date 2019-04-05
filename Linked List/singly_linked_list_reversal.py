@@ -24,7 +24,6 @@ def reversal(head):
 
 if __name__ == "__main__":
 
-    # TEST 1: Not a cycle
     a = SinglyLinkedList(value=1)
     b = SinglyLinkedList(value=2)
     c = SinglyLinkedList(value=3)
