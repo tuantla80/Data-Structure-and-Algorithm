@@ -4,7 +4,7 @@ Example 5. Fibonacci:   F(1) = 1
                         F(n) = F(n-1) + F(n-2)
 Demonstrate:
     - Recursion
-    - Memmoization:
+    - Memmoization (dynamic programming)
       (Memoization is an optimization technique used primarily to speed up computer programs
        by storing the previous results).
     - Solve with NON recursion
