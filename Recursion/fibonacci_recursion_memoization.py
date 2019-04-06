@@ -7,7 +7,7 @@ Demonstrate:
     - Memmoization (dynamic programming)
       (Memoization is an optimization technique used primarily to speed up computer programs
        by storing the previous results).
-    - Solve with NON recursion
+    - Solve with iterative (NON recursion)
 """
 
 # Recursion
@@ -76,7 +76,7 @@ def fibonacci_with_lru_cache(n):
         return fibonacci(n-1) + fibonacci(n-2)
 
 
-# With NON recursion solution
+# With iterative (NON recursion) solution
 def fibonacci_NON_recursion_solution(n):
     a = 1
     b = 1
