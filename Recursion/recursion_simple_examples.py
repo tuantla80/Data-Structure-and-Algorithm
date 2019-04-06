@@ -2,8 +2,6 @@
 Example 1: Factorial  if n=0: n!=1
                       else: n! = n*(n-1)!
 """
-
-
 def factorial(n):
     if n == 0:
         return 1
@@ -16,8 +14,6 @@ Example 2: Cummulative sum. if n=0: sum(n) = 0
                            else: sum(n) = n + sum(n-1)
            Ex. n = 4: sum(4) = 4 + 3 + 2 + 1 + 0 = 10
 """
-
-
 def recersion_sum(n):
     if n == 0:
         return 0
@@ -32,8 +28,6 @@ Example 3: Given an integer, create a function which returns the sum of all the 
     '4321' = 1 + 432    = (4321//10  + 4321%10) 
            = 1 + 2 + 43 = 4321//10 + (432//10 + 432%10)
 """
-
-
 def sum_func(n):
     if n < 10:
         return n
@@ -53,8 +47,6 @@ word_split('themanran',['the','ran','man'])  =>  ['the', 'man', 'ran']
 word_split('ilovedogsJohn', ['i','am','a','dogs','lover','love','John'])  => ['i', 'love', 'dogs', 'John']
 word_split('themanran',['something','ran','man']) => []
 """
-
-
 def word_split(phrase, predefine_words, output=None):
     if output is None:
         output = []  # because we will use this function recursively,
@@ -90,3 +82,4 @@ if __name__ == "__main__":
     print('output = {}'.format(word_split('themanran', ['the', 'ran', 'man'])))
     print('output = {}'.format(word_split('ilovedogsJohn', ['i', 'am', 'a', 'dogs', 'lover', 'love', 'John'])))
     print('output = {}'.format(word_split('themanran', ['something', 'ran', 'man'])))
+
