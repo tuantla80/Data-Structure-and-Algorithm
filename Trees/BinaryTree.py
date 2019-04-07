@@ -35,9 +35,12 @@ class BinaryTree(object):
 
 
 if __name__ == "__main__":
-    r = BinaryTree(root='ROOT')
+    r = BinaryTree(root=1)
     print("root value = {}".format(r.get_root_value()))
 
-    r.insert_left('LEFT')
+    r.insert_left(2)
+    r.insert_left(3)
+
     print("left child = {}".format(r.get_left_child()))  # <__main__.BinaryTree object at 0x00000251DAF4CD30>
-    print("left child = {}".format(r.get_left_child().get_root_value()))  
+    print("left child = {}".format(r.get_left_child().get_root_value()))
+
