@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 class Vertex:
     """
     Represent each vertex in graph
@@ -9,7 +11,8 @@ class Vertex:
                                    connected_to = {V1: 7, V5:3}  # where 7 and 3 are weight of edges
         """
         self.vertex = vertex  # vertex is also called node or vertex
-        self.connected_to = {}
+        self.connected_to = OrderedDict()  # using OrderDict instead of common dict to keep the keys of dict in order.
+                                         # so that it is easier to implement breath first search and depth first search
 
     def add_neighbor(self, neighbor, weight=0):
         self.connected_to[neighbor] = weight
@@ -33,7 +36,7 @@ class Graph:
     """
 
     def __init__(self):
-        self.vertex_dic = {}
+        self.vertex_dic = OrderedDict()
         self.num_vertices = 0
 
     def add_vertex(self, vertex):
