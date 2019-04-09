@@ -10,7 +10,7 @@ Demonstrate:
     - Solve with iterative (NON recursion)
 """
 
-# Recursion
+# Method 1: Recursion
 def fibonacci(n):
     """
     Solved using recursion
@@ -31,7 +31,7 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
 
 
-# Recursion with memoization
+# Method 2:  Recursion (with memoization)
 fibonacci_catch = {}  # store the function call
 def fibonacci_with_memoization(n):
     """
@@ -62,7 +62,7 @@ def fibonacci_with_memoization(n):
     return value
 
 
-# Recursion with lru_cache (memoization)
+# Method 2: Recursion (with lru_cache (memoization))
 from functools import lru_cache
 @lru_cache(maxsize=128)  # by defaul, Python chose 128 recently values
 def fibonacci_with_lru_cache(n):
@@ -76,13 +76,22 @@ def fibonacci_with_lru_cache(n):
         return fibonacci(n-1) + fibonacci(n-2)
 
 
-# With iterative (NON recursion) solution
+# Method 3: iterative (NON recursion) solution
 def fibonacci_NON_recursion_solution(n):
     a = 1
     b = 1
     for i in range(n-1):  # choose n-1 since we assume n=1 return 1
         a, b = b, a+b
     return a
+
+# Method 4: Generator
+a = 1
+b = 1
+def fibonacci_with_generator():
+    global a, b
+    while True:
+        a, b = b, a+b
+        yield a
 
 if __name__=="__main__":
 
@@ -91,13 +100,21 @@ if __name__=="__main__":
         print(n, ":", fibonacci(n))
 
     print("\nFibonacci with recursion and mmemoization")
-    for n in range(1, 101):
+    for n in range(1, 10):
         print(n, ":", fibonacci_with_memoization(n))
 
     print("\nFibonacci with recursion and lru_cache (mmemoization)")
-    for n in range(1, 101):
+    for n in range(1, 10):
         print(n, ":", fibonacci_with_lru_cache(n))
 
     print("\nFibonacci with NON recursion solution")
     for n in range(1, 101):
         print(n, ":", fibonacci_NON_recursion_solution(n))
+
+    print("\nFibonacci with generator")
+    f = fibonacci_with_generator(); print('f =', f)
+    next(f); print('f = ', next(f))
+    next(f)
+    next(f)
+    next(f)
+    next(f)
