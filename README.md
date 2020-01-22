@@ -8,5 +8,5 @@
   [Find First and Last Position of Element in Sorted Array](https://github.com/tuantla80/Data-Structure-and-Algorithm/blob/master/Find%20First%20and%20Last%20Position%20of%20Element%20in%20Sorted%20Array.ipynb)  
   [Sort a list of 3 unique numbers](https://github.com/tuantla80/Data-Structure-and-Algorithm/blob/master/Sort%20a%20list%20of%203%20unique%20values.ipynb)  
   [Permutation](https://github.com/tuantla80/Data-Structure-and-Algorithm/blob/master/permutation.ipynb)  
-  [Queue Reconstruction%20by%20Height](https://github.com/tuantla80/Data-Structure-and-Algorithm/blob/master/Queue%20Reconstruction%20by%20Height.ipynb)
+  [Queue Reconstruction by Height](https://github.com/tuantla80/Data-Structure-and-Algorithm/blob/master/Queue%20Reconstruction%20by%20Height.ipynb)
   
